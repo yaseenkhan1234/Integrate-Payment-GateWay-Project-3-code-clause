@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" th:href="@{/css/style1.css}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="login-form-wrap">
+  <h2>Profile</h2>
+  <form id="login-form" action="/details" method="post">
+    <p>
+    <input type="email" name="email" placeholder="Enter your Email Id" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="text" id="email" name="upiId" placeholder="Enter your upi id or card number" required><i class="validation"><span></span><span></span></i>
+    </p>
+    <p>
+    <input type="submit" id="login" value="submit">
+    </p>
+  </form>
+  <!--create-account-wrap-->
+</div><!--login-form-wrap-->
+<!-- partial -->
+  
+</body>
+</html>

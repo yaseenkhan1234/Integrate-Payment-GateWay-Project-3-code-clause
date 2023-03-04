@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Details</title>
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">	
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/style2.css}">
+</head>
+<body>
+
+
+				<div class="hero">
+				
+				<nav>
+				<ul>
+				<li><a th:href="@{/home}">Home</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+				
+				</ul>
+				<img alt="" th:src="@{/images/7.png}" class="user-pic" onclick="toggleMenu()">
+				<div class="sub-menu-wrap" id="subMenu">
+						<div class="sub-menu">
+						<div class="user-info">
+				<img alt="" th:src="@{/images/7.png}" class="user-pic">
+						<h3 th:text="${session.email}" ></h3>
+						</div>
+						<hr>
+						
+						<a href="#" class="sub-menu-link">
+				<i class="bi bi-person-fill"></i>
+				<p>Edit Profile</p>
+				<span>></span>
+						</a>
+						
+						
+						<a href="#" class="sub-menu-link">
+				<i class="bi bi-gear-fill"></i>				
+			<p>Setting and privacy</p>
+				<span>></span>
+						</a>
+						
+						
+						
+						<a href="#" class="sub-menu-link">
+				<img alt="" th:src="@{/images/1.png}" class="user-pic">
+				<p>Help & support</p>
+				<span>></span>
+						</a>
+						
+						
+						
+						<a th:href="@{/home}" class="sub-menu-link">
+			<h4><i class="bi bi-door-closed-fill"></i>Logout</h4>
+				<span>></span>
+						</a>
+						
+						
+						
+						</div>
+				</div>
+				</nav>
+							
+				</div>
+
+		
+<!-- for(Employee emp:emplist){} -->
+				<table class="table  table-striped">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Unique-id</th>
+      <th scope="col">Email-id</th>
+       <th scope="col">Mobile Number</th>
+      <th scope="col">Ammout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="client : ${client}">
+      <th scope="row" th:text="${clientStat.index+1}"></th>
+       <td th:text="${client.id}"></td>
+      <td th:text="${client.email}"></td>
+      <td th:text="${client.phone}"></td>
+      <td th:text="${client.money}"></td>
+    </tr>
+    <tr>
+     
+  </tbody>
+</table>
+
+<script type="text/javascript">
+
+let subMenu=document.getElementById("subMenu");
+
+function toggleMenu(){
+	subMenu.classList.toggle("open-menu");
+}
+		
+</script>
+
+
+</body>
+</html>

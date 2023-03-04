@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>code clause/home</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">	
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+	<!-- navbar open -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-success" data-bs-theme="light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Integrate Payment Gateway</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+        </li>
+        
+		<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About us</a>
+        </li>
+		
+		<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Site Owner</a>
+        </li>
+
+		<li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+        </ul>
+		</div>
+</div>
+</nav>   
+   <!-- navbar close -->
+<br><br>
+<div class="container-fluid">
+<div class="row justify-content-evenly">
+			<div class="col-3">
+			
+			<h4><i class="bi bi-house"></i><a th:href="@{/home}" style="color: #006480;">HOME</a></h4><br>
+			<h4><i class="bi bi-person-rolodex"></i><a th:href="@{/home}">View Contacts</a></h4><br>
+			<h4><i class="bi bi-pencil-fill"></i><a th:href="@{/home}">Add Contact</a></h4><br>
+			<h4><i class="bi bi-person-fill"></i><a th:href="@{/profile}">Your Profile</a></h4><br>
+			<h4><i class="bi bi-gear-fill"></i><a th:href="@{/home}">Settings</a></h4><br>
+			<h4><i class="bi bi-door-closed-fill"></i><a th:href="@{/home}">Logout</a></h4>
+			</div>
+			
+			<div class="col-8">
+			<div class="text-center">
+			<img alt="" th:src="@{/images/1.png}" style="width: 50%;height: 190px;align-self: center;"></img>
+			</div>			
+			<h1 class="text-center">start Adding your contact on cloud....</h1>
+			<div class="text-center bg-primary">
+			<a th:href="@{/add}" class=" text-white ">Add New Contact</a>
+			</div><br>
+			<div>
+			<h2>Donate Us</h2>
+			<form onsubmit="myFunction()" name="myForm">
+  			<div class="mb-3">
+			    <input type="number" class="form-control" name="money" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ammount here" required="required">
+			 </div>
+		 <div class="text-center bg-success">
+  <button type="submit" class="btn btn-success">Checkout</button>
+			</div>
+			  </form>
+			</div>
+			</div>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  window.open("payment","mywindow","height=500 width=500");
+  
+}
+</script>
+</body>
+</html>

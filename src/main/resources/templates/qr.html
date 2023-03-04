@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pay Through QR</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">	
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  body {
+	background-color: white;
+}
+  </style>
+</head>
+<body>
+			<div class="container-fluid">
+			<div class="row mt-5 mb-5 ml-5 mr-5">
+			<div class="col-md-5">
+			<h1>UPI QR</h1><br>
+			<div>
+			<h3>Scan the QR using any UPI app on your phone<br>
+			like BHIM PhonePe Google Pay etc.
+			</h3>
+			</div>
+			
+			<img alt="" th:src="@{/images/qr.png}" style="width: 70%;height: 200px;"><br>
+			<h3 >Please close the window after paying the ammount for security
+			
+			</h3>
+			</div>
+			</div>
+			</div>	
+</body>
+</html>
